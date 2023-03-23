@@ -1,9 +1,10 @@
+# 测试连接状态
 import poplib
 
 # 账户信息
-email = 'ljqworking@qq.com'
-password = 'ubizopjepcjmcagd'
-pop3_server = 'pop.qq.com'
+email = 'your email address'
+password = 'authorization code'
+pop3_server = 'pop.xx.com'
 # 连接到POP3服务器，带SSL的:
 server = poplib.POP3_SSL(pop3_server)
 # 可以打开或关闭调试信息:
