@@ -1,7 +1,5 @@
 # _*_ coding: utf-8 _*_
 
-# 本代码参考自： https://blog.csdn.net/ghostresur/article/details/81875574
-# 附件下载时间区间： https://www.cnblogs.com/RobZH/p/14770497.html
 
 import poplib
 import email
@@ -81,10 +79,10 @@ def get_email_content(message, save_path):
 
 if __name__ == '__main__':
     # 邮箱
-    email = 'ljqworking@qq.com'
+    email = 'your email address'
     # 授权码
-    password = 'xpnntdelvuchbggb'
-    pop3_server = 'pop.qq.com'
+    password = 'authorization code'
+    pop3_server = 'pop.xx.com'
     # 连接到POP3服务器，带SSL的:
     server = poplib.POP3_SSL(pop3_server)
     # 可以打开或关闭调试信息:
@@ -114,7 +112,7 @@ if __name__ == '__main__':
         msg = Parser().parsestr(msg_content)
         headers = get_email_headers(msg)
         # 附件保存位置
-        attachments = get_email_content(msg, r'E:\Miscellaneous_Data\email_attachments')
+        attachments = get_email_content(msg, r'store location')
 
         print('subject:', headers['Subject'])
         print('from:', headers['From'])
